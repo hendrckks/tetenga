@@ -112,7 +112,7 @@ const Venture: React.FC = () => {
             />
           </div>
           <div className="flex gap-1 p-4 py-2 flex-col">
-            <div className="lg:text-base text-sm flex items-center gap-2 font-medium">
+            <div className="lg:text-base text-sm flex items-center gap-4 font-medium">
               Lightroom presets
               <div className="py-1 px-2 text-xs rounded-md bg-white/10 text-white/80">
                 coming soon
@@ -132,7 +132,7 @@ const Venture: React.FC = () => {
             />
           </div>
           <div className="flex gap-1 p-4 py-2 flex-col">
-            <div className="lg:text-base text-sm flex gap-2 items-center font-medium">
+            <div className="lg:text-base text-sm flex gap-4 items-center font-medium">
               Wallpaper packs
               <div className="py-1 px-2 rounded-md flex items-center justify-center text-xs bg-white/10 text-white/80">
                 coming soon
