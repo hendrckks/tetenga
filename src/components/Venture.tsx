@@ -88,7 +88,7 @@ const Venture: React.FC = () => {
             <div className="flex gap-4 items-center">
               <h2 className="lg:text-xl text-lg font-bold">Devcook agency</h2>
               <Link to="https://dev-cook.web.app">
-                <ArrowUpRightBoxOutline className="text-transparent transition-all ease-in-out duration-200 scale-105 mt-1 group-hover:text-white text-xl" />
+                <ArrowUpRightBoxOutline className="lg:text-transparent text-white transition-all flex items-center ease-in-out duration-200 scale-105  group-hover:text-white text-xl" />
               </Link>
             </div>
             <p className="lg:text-sm text-xs text-white/80">
