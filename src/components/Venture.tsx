@@ -64,7 +64,7 @@ const Venture: React.FC = () => {
   ];
 
   return (
-    <div className="lg:px-0 px-2 w-full flex mt-6 flex-col gap-4 rounded-xl text-white">
+    <div className="lg:px-0 px-3 w-full flex mt-6 flex-col gap-4 rounded-xl text-white">
       <h2 className="text-xl font-medium">Ventures</h2>
       <div className="lg:px-5 group border lg:border-transparent border-white/20 w-full flex flex-col lg:flex-row items-start lg:items-center rounded-xl bg-[#0f0f0f] relative overflow-hidden">
         <div className="absolute inset-0 lg:hidden">
@@ -86,12 +86,12 @@ const Venture: React.FC = () => {
           </div>
           <div className="mx-4 flex flex-col gap-2">
             <div className="flex gap-4 items-center">
-              <h2 className="text-xl font-bold">Devcook agency</h2>
+              <h2 className="lg:text-xl text-lg font-bold">Devcook agency</h2>
               <Link to="https://dev-cook.web.app">
                 <ArrowUpRightBoxOutline className="text-transparent transition-all ease-in-out duration-200 scale-105 mt-1 group-hover:text-white text-xl" />
               </Link>
             </div>
-            <p className="text-sm text-white/80">
+            <p className="lg:text-sm text-xs text-white/80">
               Productized service that builds and ships websites in Framer,
               offering a suite of other UI & UX design capabilities.
             </p>
@@ -125,7 +125,7 @@ const Venture: React.FC = () => {
         <div className="border p-5 cursor-not-allowed rounded-xl border-dashed flex items-center border-white/20">
           <div>
             <img
-              className="lg:h-20 h-[74px] w-lg:28 w-32 rounded-lg"
+              className="lg:h-16 h-[74px] w-lg:28 w-32 rounded-lg"
               src="/ventures/wall4.webp"
             />
           </div>

@@ -6,9 +6,9 @@ import { At } from './icons/At';
 
 const Intro = () => {
   return (
-    <div className="mb-14 lg:px-0 px-2 w-full justify-between flex">
+    <div className="mb-14 lg:px-0 px-3 w-full justify-between flex">
       <div className="flex flex-col">
-        <div className="flex justify-between">
+        <div className="flex items-center lg:px-0 px-2 justify-between">
           <img
             src="/me.jpg"
             alt="tetenga image"

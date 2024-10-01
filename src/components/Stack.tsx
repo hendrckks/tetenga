@@ -1,6 +1,6 @@
 const Stack = () => {
   return (
-    <div className="w-full lg:px-0 px-2 py-20">
+    <div className="w-full lg:px-0 px-3 py-20">
       <div>
         <h3 className="text-xl font-medium">Stack</h3>
         <p className="text-sm text-white/50">

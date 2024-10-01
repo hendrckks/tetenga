@@ -7,7 +7,7 @@ import Venture from '../../components/Venture';
 
 const Home = () => {
   return (
-    <div className="min-h-[100vh] bg-[#080808] py-16">
+    <div className="min-h-[100vh] bg-[#] py-16">
       <Container>
         <Intro />
         <Venture />

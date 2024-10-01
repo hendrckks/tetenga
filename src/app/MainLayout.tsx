@@ -3,7 +3,7 @@ import NavSortof from '../components/ui/NavSortof';
 
 const MainLayout = () => {
   return (
-    <main>
+    <main className="bg-[#080808]">
       <NavSortof />
       <Outlet />
     </main>
