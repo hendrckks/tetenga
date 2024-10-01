@@ -118,7 +118,7 @@ const Venture: React.FC = () => {
             </div>
             <div className="lg:text-sm text-xs text-white/60">
               Custom made lightroom presets that will make your photos look
-              proffesional.
+              professional.
             </div>
           </div>
         </div>
