@@ -105,9 +105,9 @@ const Venture: React.FC = () => {
       </div>
       <div className="w-full grid lg:grid-cols-2 grid-cols-1 gap-2">
         <div className="border cursor-not-allowed p-5 rounded-xl flex items-center border-white/20">
-          <div>
+          <div className="min-w-1/3">
             <img
-              className="lg:h-20 h-[74px] w-lg:28 w-32 rounded-lg"
+              className="lg:h-20 h-20 lg:w-32 w-36 rounded-lg"
               src="/ventures/lightroom.png"
             />
           </div>
@@ -125,9 +125,9 @@ const Venture: React.FC = () => {
           </div>
         </div>
         <div className="border p-5 cursor-not-allowed rounded-xl border-dashed flex items-center border-white/20">
-          <div>
+          <div className="w-1/3">
             <img
-              className="lg:h-16 h-[74px] w-lg:28 w-32 rounded-lg"
+              className="h-[72px] w-[72px] rounded-lg"
               src="/ventures/wall4.webp"
             />
           </div>
