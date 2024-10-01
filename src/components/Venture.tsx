@@ -92,8 +92,10 @@ const Venture: React.FC = () => {
               </Link>
             </div>
             <p className="lg:text-sm text-xs text-white/80">
-              Productized service that builds and ships websites in Framer,
-              offering a suite of other UI & UX design capabilities.
+              Premium service based agency that is objectively focused on
+              providing quality designs, brand development and website
+              development services to companies that are serious about their
+              growth and reputation.
             </p>
           </div>
         </Link>
