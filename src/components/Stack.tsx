@@ -19,7 +19,7 @@ const Stack = () => {
           <p className="lg:text-sm text-xs text-white/50">Booking and calls</p>
         </div>
         <div className="lg:p-4 p-6 cursor-pointer flex flex-col gap-2 bg-[#0f0f0f] rounded-lg">
-          <p className="lg:text-base text-sm font-medium">Twitter</p>
+          <p className="lg:text-base text-sm font-medium">X</p>
           <p className="lg:text-sm text-xs text-white/50">
             Networking and design inspirations
           </p>
