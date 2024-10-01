@@ -21,7 +21,7 @@ const Socials = () => {
           className="flex gap-2 group text-white/50 rounded-lg cursor-pointer border border-white/20 items-center px-4 py-2"
         >
           <X />
-          <span className="text-sm ">X.com</span>
+          <span className="text-sm ">x.com</span>
           <ArrowUpRight16Solid className="text-transparent group-hover:text-white transition-colors ml-2" />
         </Link>
       </div>
