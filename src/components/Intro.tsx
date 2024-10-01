@@ -47,7 +47,7 @@ const Intro = () => {
             </h2>
           </div>
           <div className="lg:w-2/3 w-full">
-            <p className="text-white/80 lg:text-[15px] text-sm">
+            <p className="text-white/80 lg:text-base text-sm">
               I started as a freelance developer making websites and doing UI
               design for businesses and companies, but now I do a mix of
               everything from media production to running a design and
