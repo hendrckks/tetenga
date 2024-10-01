@@ -27,7 +27,7 @@ const Intro = () => {
               </Link>
               <a
                 href="mailto:samueltetenga@gmail.com"
-                className="flex cursor-pointer gap-2 bg-[#b8ff45]/80 text-[#0f0f0f] px-2 py-1 items-center rounded-sm lg:rounded-md"
+                className="flex cursor-pointer gap-2 bg-[#ff3c00] hover:bg-[#e83600] text-[#0f0f0f] px-2 py-1 items-center rounded-sm lg:rounded-md"
               >
                 <At />
                 <span className="text-sm font-medium">Get in touch</span>
