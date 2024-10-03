@@ -58,7 +58,7 @@ const Intro = () => {
           <div className="flex lg:gap-4 gap-2 items-center">
             <span className="text-sm text-white/50">Need development?</span>
             <Link
-              to="https://dev-cook.web.app"
+              to="https://devscook.com"
               className="px-1 cursor-pointer flex items-center bg-transparent rounded-full hover:bg-white/10 transition-all ease-in-out duration-200"
             >
               <img src="/dk.png" alt="devcook logo" className="h-10" />
