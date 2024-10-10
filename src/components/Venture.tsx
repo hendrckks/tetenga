@@ -72,12 +72,12 @@ const Venture: React.FC = () => {
           <div className="absolute inset-0 bg-black/20 lg:bg-black/60"></div>
         </div>
         <Link
-          to="https://dev-cook.web.app"
+          to="https://devscook.com"
           className="flex w-full lg:w-1/2 lg:gap-4 gap-2 flex-col mb-8 lg:mb-0 z-30 relative"
         >
           <div className="flex gap-2 mt-4 lg:mt-[-20px] items-center">
             <Link
-              to="https://dev-cook.web.app"
+              to="https://devscook.com"
               className="px-1 cursor-pointer flex items-center"
             >
               <img src="/dk.png" alt="devcook logo" className="h-12" />
@@ -87,7 +87,7 @@ const Venture: React.FC = () => {
           <div className="mx-4 flex flex-col gap-2">
             <div className="flex gap-4 items-center">
               <h2 className="lg:text-xl text-lg font-bold">Devcook agency</h2>
-              <Link to="https://dev-cook.web.app">
+              <Link to="https://devscook.com">
                 <ArrowUpRightBoxOutline className="lg:text-transparent text-white transition-all flex items-center ease-in-out duration-200 scale-105  group-hover:text-white text-xl" />
               </Link>
             </div>
