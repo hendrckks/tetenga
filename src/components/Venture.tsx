@@ -12,7 +12,7 @@ const ImageCarousel: React.FC<{ images: CarouselImage[] }> = ({ images }) => {
   const extendedImages = [...images, ...images];
 
   return (
-    <div className="overflow-hidden w-full relative pb-8 pt-4 px-4">
+    <div className="overflow-hidden w-full relative pb-8 pt-4 md:pt-8 px-4">
       <div className="absolute top-0 left-0 h-full w-12 bg-gradient-to-r from-[#0f0f0f] to-transparent z-10 pointer-events-none"></div>
       <div className="absolute top-0 right-0 h-full w-12 bg-gradient-to-l from-[#0f0f0f] to-transparent z-10 pointer-events-none"></div>
       <div className="absolute inset-0 bg-[#0f0f0f]/50 z-20 pointer-events-none"></div>
@@ -73,7 +73,7 @@ const Venture: React.FC = () => {
         </div>
         <Link
           to="https://devscook.com"
-          className="flex w-full lg:w-1/2 lg:gap-4 gap-2 flex-col mb-8 lg:mb-0 z-30 relative"
+          className="flex w-full lg:w-1/2 lg:gap-4 gap-2 md:py-10 flex-col mb-8 lg:mb-0 z-30 relative"
         >
           <div className="flex gap-2 mt-4 lg:mt-[-20px] items-center">
             <Link
@@ -81,12 +81,14 @@ const Venture: React.FC = () => {
               className="px-1 cursor-pointer flex items-center"
             >
               <img src="/dk.png" alt="devcook logo" className="h-12" />
-              <span className="text-base mr-4 font-medium">Devcook</span>
+              <span className="text-lg mr-4 font-medium">Devscook</span>
             </Link>
           </div>
           <div className="mx-4 flex flex-col gap-2">
             <div className="flex gap-4 items-center">
-              <h2 className="lg:text-xl text-lg font-bold">Devcook agency</h2>
+              <h2 className="lg:text-xl text-lg font-medium">
+                Devscook agency
+              </h2>
               <Link to="https://devscook.com">
                 <ArrowUpRightBoxOutline className="lg:text-transparent text-white transition-all flex items-center ease-in-out duration-200 scale-105  group-hover:text-white text-xl" />
               </Link>
@@ -114,11 +116,11 @@ const Venture: React.FC = () => {
           <div className="flex gap-1 p-4 py-2 flex-col">
             <div className="lg:text-base text-sm flex items-center gap-4 font-medium">
               Lightroom presets
-              <div className="py-1 px-2 text-xs rounded-md bg-white/10 text-white/80">
+              <div className="py-1 px-2 md:text-xs text-[11px] rounded-md bg-white/10 text-white/80">
                 coming soon
               </div>
             </div>
-            <div className="lg:text-sm text-xs text-white/60">
+            <div className="lg:text-sm text-xs text-[#b4b3b1]">
               Custom made lightroom presets that will make your photos look
               professional.
             </div>
@@ -134,11 +136,11 @@ const Venture: React.FC = () => {
           <div className="flex gap-1 p-4 py-2 flex-col">
             <div className="lg:text-base text-sm flex gap-4 items-center font-medium">
               Wallpaper packs
-              <div className="py-1 px-2 rounded-md flex items-center justify-center text-xs bg-white/10 text-white/80">
+              <div className="py-1 px-2 rounded-md flex items-center justify-center md:text-xs text-[11px] bg-white/10 text-white/80">
                 coming soon
               </div>
             </div>
-            <div className="lg:text-sm text-xs text-white/60">
+            <div className="lg:text-sm text-xs text-[#b4b3b1]">
               Custom built premium wallpapers for desktops and mobile devices.
             </div>
           </div>
