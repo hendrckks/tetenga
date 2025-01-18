@@ -1,150 +1,122 @@
 import { motion } from 'framer-motion';
 import React from 'react';
+import { ArrowTopRight } from '../assets/icons/Arrow';
 import { Link } from 'react-router-dom';
-import { ArrowUpRightBoxOutline } from './icons/ArrowUp';
 
-interface CarouselImage {
-  src: string;
-  alt: string;
+interface VentureCardProps {
+  title: string;
+  imageSrc: string;
+  link: string;
+  comingSoon?: boolean;
+  description?: string;
 }
 
-const ImageCarousel: React.FC<{ images: CarouselImage[] }> = ({ images }) => {
-  const extendedImages = [...images, ...images];
+const VentureCard: React.FC<VentureCardProps> = ({
+  title,
+  imageSrc,
+  link,
+  comingSoon,
+  description,
+}) => {
+  if (comingSoon) {
+    return (
+      <div className="border p-5 cursor-not-allowed rounded-xl border-dashed border-white/20 flex items-center">
+        <div className="min-w-1/3">
+          <img className="h-20 w-32 rounded-lg" src={imageSrc} alt={title} />
+        </div>
+        <div className="flex gap-1 p-4 py-2 flex-col">
+          <div className="text-base flex items-center gap-4 font-medium">
+            {title}
+            <div className="py-1 px-2 text-xs rounded-md bg-white/10 text-white/80">
+              coming soon
+            </div>
+          </div>
+          {description && (
+            <div className="text-sm text-[#b4b3b1]">{description}</div>
+          )}
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <div className="overflow-hidden w-full relative pb-8 pt-4 md:pt-8 px-4">
-      <div className="absolute top-0 left-0 h-full w-12 bg-gradient-to-r from-[#0f0f0f] to-transparent z-10 pointer-events-none"></div>
-      <div className="absolute top-0 right-0 h-full w-12 bg-gradient-to-l from-[#0f0f0f] to-transparent z-10 pointer-events-none"></div>
-      <div className="absolute inset-0 bg-[#0f0f0f]/50 z-20 pointer-events-none"></div>
-      <motion.div
-        className="flex items-center justify-center space-x-10"
-        animate={{ x: [0, -1000] }}
-        transition={{
-          x: {
-            repeat: Infinity,
-            repeatType: 'loop',
-            duration: 20,
-            ease: 'linear',
-          },
-        }}
-      >
-        {extendedImages.map((image, index) => (
-          <div
-            key={index}
-            className="flex-shrink-0 w-64 h-40 relative overflow-hidden rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105 hover:z-10"
-            style={{
-              perspective: '1000px',
-              transformStyle: 'preserve-3d',
-            }}
+    <div className="group w-full border border-white/20 p-1 flex flex-col gap-2 h-80 rounded-md">
+      <div className="h-full relative overflow-hidden">
+        <img
+          src={imageSrc}
+          alt={title}
+          className="object-cover h-full w-full rounded-[2px]"
+        />
+        {/* Desktop version with hover animation */}
+        <div className="hidden lg:block">
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            animate={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 30, opacity: 0 }}
+            whileHover={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.2 }}
+            className="py-1 px-2 border-white/20 absolute bottom-2 left-2 bg-gray-950 rounded-sm border w-fit text-xs text-white/70"
           >
-            <img
-              src={image.src}
-              alt={image.alt}
-              className="w-full h-full object-cover transform"
-            />
-          </div>
-        ))}
-      </motion.div>
+            {title}
+          </motion.div>
+        </div>
+        {/* Mobile version (always visible) */}
+        <div className="lg:hidden py-1 px-2 border-white/20 absolute bottom-2 left-2 bg-gray-950 rounded-sm border w-fit text-xs text-white/70">
+          {title}
+        </div>
+      </div>
+      <div className="w-full">
+        <Link
+          to={link}
+          className="py-[6px] rounded-[2px] text-white/70 hover:bg-white/10 cursor-pointer transition-colors ease-in-out border flex items-center justify-center text-sm border-white/20"
+        >
+          View Live
+          <span>
+            <ArrowTopRight className="text-base ml-1" />
+          </span>
+        </Link>
+      </div>
     </div>
   );
 };
 
 const Venture: React.FC = () => {
-  const carouselImages: CarouselImage[] = [
-    { src: '/carousel/xd.webp', alt: 'Project 1' },
-    { src: '/carousel/cv.webp', alt: 'Project 2' },
-    { src: '/carousel/xf.webp', alt: 'Project 3' },
-    { src: '/carousel/xg.webp', alt: 'Project 4' },
-    { src: '/carousel/xh.webp', alt: 'Project 5' },
-    { src: '/carousel/xd.webp', alt: 'Project 1' },
-    { src: '/carousel/cv.webp', alt: 'Project 2' },
-    { src: '/carousel/xf.webp', alt: 'Project 3' },
-    { src: '/carousel/xg.webp', alt: 'Project 4' },
-    { src: '/carousel/xh.webp', alt: 'Project 5' },
+  const ventures = [
+    {
+      title: 'Weathleats',
+      imageSrc: '/ventures/weathleats.webp',
+      link: 'http://weathleats.vercel.app',
+    },
+    {
+      title: 'Devscook',
+      imageSrc: '/ventures/devscook.jpg',
+      link: 'https://devscook.com',
+    },
+    {
+      title: 'Lightroom presets',
+      imageSrc: '/ventures/lightroom.png',
+      link: '#',
+      comingSoon: true,
+      description:
+        'Custom made lightroom presets that will make your photos look professional.',
+    },
+    {
+      title: 'Wallpaper packs',
+      imageSrc: '/ventures/wall4.webp',
+      link: '#',
+      comingSoon: true,
+      description:
+        'Custom built premium wallpapers for desktops and mobile devices.',
+    },
   ];
 
   return (
     <div className="lg:px-0 px-3 w-full flex mt-6 flex-col gap-4 rounded-xl text-white">
-      <h2 className="text-xl font-medium">Ventures</h2>
-      <div className="lg:px-5 group border lg:border-transparent border-white/20 w-full flex flex-col lg:flex-row items-start lg:items-center rounded-xl bg-[#0f0f0f] relative overflow-hidden">
-        <div className="absolute inset-0 lg:hidden">
-          <ImageCarousel images={carouselImages} />
-          <div className="absolute inset-0 bg-black/20 lg:bg-black/60"></div>
-        </div>
-        <Link
-          to="https://devscook.com"
-          className="flex w-full lg:w-1/2 lg:gap-4 gap-2 md:py-10 flex-col mb-8 lg:mb-0 z-30 relative"
-        >
-          <div className="flex gap-2 mt-4 lg:mt-[-20px] items-center">
-            <Link
-              to="https://devscook.com"
-              className="px-1 cursor-pointer flex items-center"
-            >
-              <img src="/dk.png" alt="devcook logo" className="h-12" />
-              <span className="text-lg mr-4 font-medium">Devscook</span>
-            </Link>
-          </div>
-          <div className="mx-4 flex flex-col gap-2">
-            <div className="flex gap-4 items-center">
-              <h2 className="lg:text-xl text-lg font-medium">
-                Devscook agency
-              </h2>
-              <Link to="https://devscook.com">
-                <ArrowUpRightBoxOutline className="lg:text-transparent text-white transition-all flex items-center ease-in-out duration-200 scale-105  group-hover:text-white text-xl" />
-              </Link>
-            </div>
-            <p className="lg:text-sm text-xs text-white/80">
-              Premium service based agency that is objectively focused on
-              providing quality designs, brand development and website
-              development services to companies that are serious about their
-              growth and reputation.
-            </p>
-          </div>
-        </Link>
-        <div className="w-full lg:w-1/2 hidden lg:block">
-          <ImageCarousel images={carouselImages} />
-        </div>
-      </div>
-      <div className="w-full grid lg:grid-cols-2 grid-cols-1 gap-2">
-        <div className="border cursor-not-allowed p-5 rounded-xl flex items-center border-white/20">
-          <div className="min-w-1/3">
-            <img
-              className="lg:h-20 h-20 lg:w-32 w-36 rounded-lg"
-              src="/ventures/lightroom.png"
-            />
-          </div>
-          <div className="flex gap-1 p-4 py-2 flex-col">
-            <div className="lg:text-base text-sm flex items-center gap-4 font-medium">
-              Lightroom presets
-              <div className="py-1 px-2 md:text-xs text-[11px] rounded-md bg-white/10 text-white/80">
-                coming soon
-              </div>
-            </div>
-            <div className="lg:text-sm text-xs text-[#b4b3b1]">
-              Custom made lightroom presets that will make your photos look
-              professional.
-            </div>
-          </div>
-        </div>
-        <div className="border p-5 cursor-not-allowed rounded-xl border-dashed flex items-center border-white/20">
-          <div className="w-1/3">
-            <img
-              className="h-[72px] w-[72px] rounded-lg"
-              src="/ventures/wall4.webp"
-            />
-          </div>
-          <div className="flex gap-1 p-4 py-2 flex-col">
-            <div className="lg:text-base text-sm flex gap-4 items-center font-medium">
-              Wallpaper packs
-              <div className="py-1 px-2 rounded-md flex items-center justify-center md:text-xs text-[11px] bg-white/10 text-white/80">
-                coming soon
-              </div>
-            </div>
-            <div className="lg:text-sm text-xs text-[#b4b3b1]">
-              Custom built premium wallpapers for desktops and mobile devices.
-            </div>
-          </div>
-        </div>
+      <h2 className="text-xl font-medium text-white/90">Ventures</h2>
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-2">
+        {ventures.map((venture, index) => (
+          <VentureCard key={index} {...venture} />
+        ))}
       </div>
     </div>
   );
