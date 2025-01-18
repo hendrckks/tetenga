@@ -41,7 +41,7 @@ const Intro = () => {
             <span className="text-white/80">Available for work</span>
           </div>
           <div>
-            <h2 className="lg:text-[22px] text-lg">
+            <h2 className="lg:text-[22px] text-white/80 text-lg">
               I'm <span className="text-white/50">Tetenga</span> -- a software
               developer and creator.
             </h2>

@@ -34,7 +34,7 @@ const LocalTimeClock: React.FC = () => {
   const hours = time.getHours() % 12;
 
   return (
-    <div className="flex items-center space-x-2 text-sm">
+    <div className="flex items-center text-white/80 space-x-2 text-sm">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-5 w-5"
