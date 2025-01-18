@@ -62,7 +62,9 @@ const Intro = () => {
               className="px-1 cursor-pointer flex items-center bg-transparent rounded-full hover:bg-white/10 transition-all ease-in-out duration-200"
             >
               <img src="/dk.png" alt="devcook logo" className="h-10" />
-              <span className="text-sm mr-4 font-medium">Devcook</span>
+              <span className="text-sm mr-4 font-medium text-white/80">
+                Devcook
+              </span>
             </Link>
           </div>
         </div>
