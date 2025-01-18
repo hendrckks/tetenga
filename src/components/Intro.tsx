@@ -36,7 +36,7 @@ const Intro = () => {
           </div>
         </div>
         <div className="mt-7 flex flex-col gap-5">
-          <div className="flex gap-3 py-2 px-3 text-xs rounded-xl bg-white/10 w-fit">
+          <div className="flex gap-3 py-2 px-3 text-xs rounded-lg bg-white/10 w-fit">
             <EnhancedPulsingLiveButton />
             <span className="text-white/80">Available for work</span>
           </div>
@@ -47,7 +47,7 @@ const Intro = () => {
             </h2>
           </div>
           <div className="lg:w-2/3 w-full">
-            <p className="text-white/80 lg:text-[15px] text-sm">
+            <p className="text-white/80 lg:text-[15px] text-sm md:tracking-wide">
               I started as a freelance developer making websites and doing UI
               design for businesses and Entrepreneurs, but now I do a mix of
               everything from media production to running a design and
@@ -59,7 +59,7 @@ const Intro = () => {
             <span className="text-sm text-white/50">Need development?</span>
             <Link
               to="https://devscook.com"
-              className="px-1 cursor-pointer flex items-center bg-transparent rounded-full hover:bg-white/10 transition-all ease-in-out duration-200"
+              className="px-1 cursor-pointer flex items-center bg-transparent rounded-lg hover:bg-white/10 transition-all ease-in-out duration-200"
             >
               <img src="/dk.png" alt="devcook logo" className="h-10" />
               <span className="text-sm mr-4 font-medium text-white/80">

@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import React from 'react';
 import { ArrowTopRight } from '../assets/icons/Arrow';
 import { AdobeLightroom } from '../assets/icons/Lightroom';
@@ -23,7 +22,7 @@ const VentureCard: React.FC<VentureCardProps> = ({
 }) => {
   if (comingSoon) {
     return (
-      <div className="border py-5 px-2 mt-5 cursor-not-allowed rounded-xl border-dashed border-white/20 grid grid-cols-4 items-center">
+      <div className="border py-5 px-2 mt-5 cursor-not-allowed rounded-lg border-dashed border-white/20 grid grid-cols-4 items-center">
         <div className="col-span-1">
           {icon ? (
             <div className="h-20 rounded-lg flex items-center justify-center">
@@ -54,24 +53,17 @@ const VentureCard: React.FC<VentureCardProps> = ({
 
   return (
     <div className="group w-full border border-white/20 p-1 flex flex-col gap-2 h-80 rounded-md">
-      <div className="h-full relative overflow-hidden">
+      <div className="h-full group relative overflow-hidden">
         <img
           src={imageSrc}
           alt={title}
           className="object-cover h-full w-full rounded-[2px]"
         />
         {/* Desktop version with hover animation */}
-        <div className="hidden lg:block">
-          <motion.div
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 30, opacity: 0 }}
-            whileHover={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.2 }}
-            className="py-1 px-2 border-white/20 absolute bottom-2 left-2 bg-gray-950 rounded-sm border w-fit text-xs text-white/70"
-          >
+        <div className="opacity-0 group-hover:opacity-100 ease-in-out transition-opacity duration-200 lg:block">
+          <div className="py-1 px-2 border-white/20 absolute bottom-2 left-2 bg-gray-950 rounded-sm border w-fit text-xs text-white/70">
             {title}
-          </motion.div>
+          </div>
         </div>
         {/* Mobile version (always visible) */}
         <div className="lg:hidden py-1 px-2 border-white/20 absolute bottom-2 left-2 bg-gray-950 rounded-sm border w-fit text-xs text-white/70">
