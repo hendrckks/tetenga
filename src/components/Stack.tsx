@@ -45,7 +45,7 @@ const stackItems: StackItem[] = [
 // Card component with proper type definitions
 const StackCard: React.FC<StackItem> = ({ title, description }) => (
   <div className="lg:p-4 p-6 cursor-pointer flex flex-col gap-2 bg-[#0f0f0f] rounded-lg">
-    <p className="text-base font-medium">{title}</p>
+    <p className="text-base font-medium text-white/90">{title}</p>
     <p className="text-sm text-[#b4b3b1]">{description}</p>
   </div>
 );
