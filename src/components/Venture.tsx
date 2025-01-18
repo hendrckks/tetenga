@@ -1,14 +1,16 @@
 import { motion } from 'framer-motion';
 import React from 'react';
 import { ArrowTopRight } from '../assets/icons/Arrow';
+import { AdobeLightroom } from '../assets/icons/Lightroom';
 import { Link } from 'react-router-dom';
 
 interface VentureCardProps {
   title: string;
-  imageSrc: string;
+  imageSrc?: string;
   link: string;
   comingSoon?: boolean;
   description?: string;
+  icon?: React.ReactNode;
 }
 
 const VentureCard: React.FC<VentureCardProps> = ({
@@ -17,14 +19,25 @@ const VentureCard: React.FC<VentureCardProps> = ({
   link,
   comingSoon,
   description,
+  icon,
 }) => {
   if (comingSoon) {
     return (
-      <div className="border p-5 cursor-not-allowed rounded-xl border-dashed border-white/20 flex items-center">
-        <div className="min-w-1/3">
-          <img className="h-20 w-32 rounded-lg" src={imageSrc} alt={title} />
+      <div className="border py-5 px-2 mt-5 cursor-not-allowed rounded-xl border-dashed border-white/20 grid grid-cols-4 items-center">
+        <div className="col-span-1">
+          {icon ? (
+            <div className="h-20 rounded-lg flex items-center justify-center">
+              {icon}
+            </div>
+          ) : (
+            <img
+              className="h-20 md:w-20 justify-self-center w-full rounded-lg"
+              src={imageSrc}
+              alt={title}
+            />
+          )}
         </div>
-        <div className="flex gap-1 p-4 py-2 flex-col">
+        <div className="flex gap-1 w-full px-2 py-2 flex-col col-span-3">
           <div className="text-base flex items-center gap-4 font-medium">
             {title}
             <div className="py-1 px-2 text-xs rounded-md bg-white/10 text-white/80">
@@ -94,7 +107,7 @@ const Venture: React.FC = () => {
     },
     {
       title: 'Lightroom presets',
-      imageSrc: '/ventures/lightroom.png',
+      icon: <AdobeLightroom className="w-20 h-20" />,
       link: '#',
       comingSoon: true,
       description:
@@ -112,7 +125,7 @@ const Venture: React.FC = () => {
 
   return (
     <div className="lg:px-0 px-3 w-full flex mt-6 flex-col gap-4 rounded-xl text-white">
-      <h2 className="text-xl font-medium text-white/90">Ventures</h2>
+      <h2 className="text-xl font-medium text-white/90">Projects</h2>
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-2">
         {ventures.map((venture, index) => (
           <VentureCard key={index} {...venture} />
