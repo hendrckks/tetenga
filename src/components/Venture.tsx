@@ -115,9 +115,19 @@ const Venture: React.FC = () => {
     },
   ];
 
+  // Calculate the number of active (non-coming-soon) projects
+  const activeProjectsCount = ventures.filter(
+    (venture) => !venture.comingSoon
+  ).length;
+
   return (
     <div className="lg:px-0 px-3 w-full flex mt-6 flex-col gap-4 rounded-xl text-white">
-      <h2 className="text-xl font-medium text-white/90">Projects</h2>
+      <h2 className="text-xl font-medium text-white/90">
+        Projects
+        <span className="text-xs ml-1 relative bottom-3">
+          ({activeProjectsCount})
+        </span>
+      </h2>
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-2">
         {ventures.map((venture, index) => (
           <VentureCard key={index} {...venture} />
