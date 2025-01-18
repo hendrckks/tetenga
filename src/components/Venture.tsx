@@ -121,7 +121,7 @@ const Venture: React.FC = () => {
   ).length;
 
   return (
-    <div className="lg:px-0 px-3 w-full flex mt-6 flex-col gap-4 rounded-xl text-white">
+    <div className="lg:px-0 px-3 w-full flex flex-col gap-4 rounded-xl text-white">
       <h2 className="text-xl font-medium text-white/90">
         Projects
         <span className="text-xs ml-1 relative bottom-3">
