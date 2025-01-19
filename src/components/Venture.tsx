@@ -94,13 +94,13 @@ const Venture: React.FC = () => {
     },
     {
       title: 'Devscook',
-      imageSrc: '/ventures/ventos(3).webp',
-      link: '/',
+      imageSrc: '/ventures/devscook.jpg',
+      link: 'https://devscook.com',
     },
     {
       title: 'Ventos',
-      imageSrc: '/ventures/devscook.jpg',
-      link: 'https://devscook.com',
+      imageSrc: '/ventures/ventos(3).webp',
+      link: '/',
     },
     {
       title: 'Lightroom presets',
