@@ -94,6 +94,11 @@ const Venture: React.FC = () => {
     },
     {
       title: 'Devscook',
+      imageSrc: '/ventures/ventos(3).webp',
+      link: '/',
+    },
+    {
+      title: 'Ventos',
       imageSrc: '/ventures/devscook.jpg',
       link: 'https://devscook.com',
     },
