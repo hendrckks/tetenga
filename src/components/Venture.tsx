@@ -128,7 +128,7 @@ const Venture: React.FC = () => {
   return (
     <div className="lg:px-0 px-3 w-full flex flex-col gap-4 rounded-xl text-white">
       <h2 className="text-xl font-medium text-white/90">
-        Projects
+        Latest Projects
         <span className="text-xs ml-1 relative bottom-3">
           ({activeProjectsCount})
         </span>
